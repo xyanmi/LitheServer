@@ -1,0 +1,309 @@
+{
+  "project": {
+    "name": "QuickServer",
+    "version": "0.1.0",
+    "description": "一个轻量级的本地文件服务器，具有美观的 Web 界面",
+    "author": {
+      "name": "xyanmi",
+      "email": "example@domain.com",
+      "github": "https://github.com/xyanmi",
+      "social": {
+        "twitter": "@xyanmi",
+        "linkedin": "xyanmi"
+      }
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/xyanmi/quickserver.git",
+      "branch": "main",
+      "lastCommit": "a1b2c3d4e5f6g7h8i9j0",
+      "tags": ["v0.1.0", "stable", "release"]
+    },
+    "license": "MIT",
+    "keywords": [
+      "file-server",
+      "http-server",
+      "web-interface",
+      "python",
+      "local-development",
+      "静态文件服务器"
+    ]
+  },
+  "dependencies": {
+    "runtime": {},
+    "development": {
+      "pytest": "^7.0.0",
+      "black": "^22.0.0",
+      "flake8": "^4.0.0",
+      "mypy": "^0.950"
+    },
+    "optional": {
+      "pillow": "^9.0.0",
+      "watchdog": "^2.1.0"
+    }
+  },
+  "configuration": {
+    "server": {
+      "host": "0.0.0.0",
+      "port": 8000,
+      "timeout": 30,
+      "maxConnections": 100,
+      "enableLogging": true,
+      "logLevel": "INFO",
+      "corsEnabled": false,
+      "corsOrigins": ["*"],
+      "sslEnabled": false,
+      "sslCertPath": null,
+      "sslKeyPath": null
+    },
+    "features": {
+      "fileUpload": true,
+      "fileDownload": true,
+      "filePreview": true,
+      "directoryListing": true,
+      "searchFunctionality": true,
+      "syntaxHighlighting": true,
+      "responsiveDesign": true,
+      "darkMode": false,
+      "authentication": {
+        "enabled": false,
+        "type": "basic",
+        "users": {},
+        "sessionTimeout": 3600
+      }
+    },
+    "ui": {
+      "theme": "default",
+      "customCSS": "",
+      "showHiddenFiles": false,
+      "itemsPerPage": 50,
+      "defaultSortBy": "name",
+      "defaultSortOrder": "asc",
+      "enableAnimations": true,
+      "compactMode": false
+    }
+  },
+  "supportedFileTypes": {
+    "preview": {
+      "text": [".txt", ".md", ".py", ".js", ".json", ".html", ".css", ".xml", ".yaml", ".yml"],
+      "images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".webp"],
+      "documents": [".pdf"],
+      "code": {
+        "python": [".py", ".pyw"],
+        "javascript": [".js", ".jsx", ".ts", ".tsx"],
+        "web": [".html", ".htm", ".css", ".scss", ".sass"],
+        "data": [".json", ".xml", ".yaml", ".yml", ".csv"],
+        "config": [".ini", ".conf", ".cfg", ".env"],
+        "shell": [".sh", ".bash", ".zsh", ".fish"],
+        "c_family": [".c", ".cpp", ".cxx", ".cc", ".h", ".hpp"],
+        "java": [".java", ".class"],
+        "other": [".sql", ".php", ".rb", ".go", ".rs", ".swift"]
+      }
+    },
+    "upload": {
+      "allowed": ["*"],
+      "blocked": [".exe", ".bat", ".cmd", ".scr", ".pif", ".com"],
+      "maxFileSize": "100MB",
+      "maxTotalSize": "1GB"
+    }
+  },
+  "statistics": {
+    "usage": {
+      "totalRequests": 15487,
+      "uniqueVisitors": 342,
+      "filesServed": 8293,
+      "dataTransferred": "2.3GB",
+      "averageResponseTime": "45ms",
+      "uptimePercentage": 99.8,
+      "errorRate": 0.2,
+      "lastReset": "2024-01-01T00:00:00.000Z"
+    },
+    "popular": {
+      "fileTypes": {
+        ".html": 3245,
+        ".css": 2876,
+        ".js": 2654,
+        ".png": 1876,
+        ".jpg": 1543,
+        ".pdf": 987,
+        ".json": 654,
+        ".txt": 432
+      },
+      "directories": [
+        "/assets",
+        "/docs",
+        "/images",
+        "/scripts",
+        "/styles"
+      ],
+      "userAgents": {
+        "Chrome": 67.5,
+        "Firefox": 18.3,
+        "Safari": 8.7,
+        "Edge": 4.2,
+        "Other": 1.3
+      }
+    }
+  },
+  "testing": {
+    "unitTests": {
+      "total": 156,
+      "passing": 154,
+      "failing": 2,
+      "coverage": 89.6,
+      "lastRun": "2024-03-15T14:30:22.123Z"
+    },
+    "integrationTests": {
+      "total": 42,
+      "passing": 40,
+      "failing": 2,
+      "coverage": 76.8,
+      "lastRun": "2024-03-15T14:35:18.456Z"
+    },
+    "performanceTests": {
+      "requestsPerSecond": 1250,
+      "averageLatency": "12ms",
+      "memoryUsage": "45MB",
+      "cpuUsage": "8.3%",
+      "lastRun": "2024-03-15T14:40:55.789Z"
+    }
+  },
+  "deployment": {
+    "environments": {
+      "development": {
+        "url": "http://localhost:8000",
+        "status": "active",
+        "lastDeployed": "2024-03-15T10:00:00.000Z",
+        "version": "0.1.0-dev",
+        "features": ["debug", "hot-reload", "verbose-logging"]
+      },
+      "staging": {
+        "url": "https://staging.quickserver.example.com",
+        "status": "inactive",
+        "lastDeployed": "2024-03-10T15:30:00.000Z",
+        "version": "0.1.0-rc1",
+        "features": ["staging-data", "performance-monitoring"]
+      },
+      "production": {
+        "url": "https://quickserver.example.com",
+        "status": "planned",
+        "lastDeployed": null,
+        "version": null,
+        "features": ["ssl", "cdn", "monitoring", "backup"]
+      }
+    },
+    "buildInfo": {
+      "buildNumber": 128,
+      "buildTime": "2024-03-15T09:45:33.210Z",
+      "gitCommit": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6",
+      "branch": "main",
+      "buildAgent": "GitHub Actions",
+      "artifacts": [
+        {
+          "name": "quickserver-0.1.0.tar.gz",
+          "size": "125KB",
+          "checksum": "sha256:abc123def456ghi789jkl012mno345pqr678stu901vwx234yz567"
+        },
+        {
+          "name": "quickserver-0.1.0-py3-none-any.whl",
+          "size": "98KB",
+          "checksum": "sha256:def456ghi789jkl012mno345pqr678stu901vwx234yz567abc123"
+        }
+      ]
+    }
+  },
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "2024-03-15",
+      "type": "release",
+      "changes": [
+        "Initial release",
+        "Basic file server functionality",
+        "Web interface for file browsing",
+        "File upload and download support",
+        "Syntax highlighting for code files",
+        "Responsive design for mobile devices"
+      ],
+      "breaking": false,
+      "contributors": ["xyanmi"]
+    },
+    {
+      "version": "0.1.0-rc1",
+      "date": "2024-03-10",
+      "type": "pre-release",
+      "changes": [
+        "Added file preview functionality",
+        "Improved UI design",
+        "Added search functionality",
+        "Bug fixes and performance improvements"
+      ],
+      "breaking": false,
+      "contributors": ["xyanmi"]
+    },
+    {
+      "version": "0.1.0-beta1",
+      "date": "2024-03-01",
+      "type": "beta",
+      "changes": [
+        "Core server implementation",
+        "Basic web interface",
+        "File listing and navigation"
+      ],
+      "breaking": false,
+      "contributors": ["xyanmi"]
+    }
+  ],
+  "roadmap": {
+    "v0.2.0": {
+      "plannedDate": "2024-06-01",
+      "features": [
+        "User authentication system",
+        "File sharing with links",
+        "Thumbnail generation for images",
+        "Dark mode support",
+        "Multiple theme options"
+      ],
+      "status": "planning"
+    },
+    "v0.3.0": {
+      "plannedDate": "2024-09-01",
+      "features": [
+        "Plugin system",
+        "API endpoints",
+        "Database integration",
+        "Advanced search with filters",
+        "Collaborative features"
+      ],
+      "status": "concept"
+    },
+    "v1.0.0": {
+      "plannedDate": "2024-12-01",
+      "features": [
+        "Stable API",
+        "Production-ready features",
+        "Comprehensive documentation",
+        "Performance optimizations",
+        "Security hardening"
+      ],
+      "status": "future"
+    }
+  },
+  "metadata": {
+    "created": "2024-03-01T00:00:00.000Z",
+    "lastModified": "2024-03-15T16:20:30.123Z",
+    "fileVersion": "1.0",
+    "encoding": "UTF-8",
+    "generator": "QuickServer Config Generator v1.0",
+    "checksum": "sha256:1234567890abcdef1234567890abcdef12345678",
+    "size": 5847,
+    "locale": "zh-CN",
+    "timezone": "Asia/Shanghai",
+    "comments": [
+      "这是 QuickServer 项目的配置文件",
+      "包含了项目的所有元数据和配置信息",
+      "支持中文和英文的混合内容",
+      "用于测试 JSON 语法高亮功能"
+    ]
+  }
+} 

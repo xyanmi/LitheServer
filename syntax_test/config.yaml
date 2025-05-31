@@ -1,0 +1,297 @@
+# QuickServer Configuration File
+# YAML 语法高亮测试文件
+
+# 服务器基础配置
+server:
+  name: "QuickServer"
+  version: "0.1.0"
+  description: "轻量级本地文件服务器"
+  
+  # 网络设置
+  network:
+    host: "0.0.0.0"
+    port: 8000
+    max_connections: 100
+    timeout: 30
+    keep_alive: true
+    
+  # SSL/TLS 配置
+  ssl:
+    enabled: false
+    cert_file: "/path/to/cert.pem"
+    key_file: "/path/to/key.pem"
+    protocols:
+      - "TLSv1.2"
+      - "TLSv1.3"
+
+# 功能特性配置
+features:
+  # 文件操作
+  file_operations:
+    upload: true
+    download: true
+    delete: true
+    rename: true
+    move: true
+    create_directory: true
+    
+  # 预览功能
+  preview:
+    enabled: true
+    supported_types:
+      text: [".txt", ".md", ".py", ".js", ".json", ".html", ".css"]
+      images: [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg"]
+      documents: [".pdf"]
+    max_file_size: "10MB"
+    
+  # 语法高亮
+  syntax_highlighting:
+    enabled: true
+    theme: "github"
+    languages:
+      - name: "Python"
+        extensions: [".py", ".pyw"]
+        color: "#3776ab"
+      - name: "JavaScript"
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+        color: "#f7df1e"
+      - name: "HTML"
+        extensions: [".html", ".htm"]
+        color: "#e34f26"
+      - name: "CSS"
+        extensions: [".css", ".scss", ".sass"]
+        color: "#1572b6"
+
+# 用户界面配置
+ui:
+  theme:
+    name: "default"
+    primary_color: "#3498db"
+    secondary_color: "#2ecc71"
+    danger_color: "#e74c3c"
+    warning_color: "#f39c12"
+    
+  layout:
+    show_hidden_files: false
+    items_per_page: 50
+    compact_mode: false
+    enable_animations: true
+    
+  # 响应式断点
+  breakpoints:
+    mobile: "480px"
+    tablet: "768px"
+    desktop: "1024px"
+    wide: "1200px"
+
+# 安全配置
+security:
+  # 访问控制
+  access_control:
+    enabled: false
+    whitelist_ips: []
+    blacklist_ips: []
+    
+  # 文件上传限制
+  upload_restrictions:
+    max_file_size: "100MB"
+    max_total_size: "1GB"
+    allowed_extensions: ["*"]
+    blocked_extensions: [".exe", ".bat", ".cmd", ".scr"]
+    scan_for_viruses: false
+    
+  # 路径安全
+  path_security:
+    prevent_directory_traversal: true
+    restrict_to_serve_directory: true
+    block_hidden_files: true
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] %(levelname)s: %(message)s"
+  
+  # 日志文件
+  file:
+    enabled: true
+    path: "./logs/quickserver.log"
+    max_size: "10MB"
+    backup_count: 5
+    
+  # 控制台输出
+  console:
+    enabled: true
+    colored: true
+    
+  # 访问日志
+  access_log:
+    enabled: true
+    path: "./logs/access.log"
+    format: '%(remote_addr)s - "%(request_line)s" %(status_code)s %(content_length)s'
+
+# 性能配置
+performance:
+  # 缓存设置
+  cache:
+    enabled: true
+    max_age: 3600  # seconds
+    file_cache_size: "100MB"
+    
+  # 压缩设置
+  compression:
+    enabled: true
+    min_size: 1024  # bytes
+    level: 6
+    types:
+      - "text/html"
+      - "text/css"
+      - "application/javascript"
+      - "application/json"
+      
+  # 并发设置
+  concurrency:
+    max_workers: 4
+    thread_pool_size: 10
+    async_enabled: true
+
+# 开发者配置
+development:
+  debug: false
+  hot_reload: false
+  profiling: false
+  
+  # 开发服务器设置
+  dev_server:
+    auto_restart: true
+    watch_files: [".py", ".html", ".css", ".js"]
+    ignore_patterns: ["__pycache__", "*.pyc", ".git"]
+
+# 扩展配置
+extensions:
+  # 插件系统
+  plugins:
+    enabled: false
+    directory: "./plugins"
+    auto_load: true
+    
+  # API 接口
+  api:
+    enabled: false
+    version: "v1"
+    rate_limiting:
+      enabled: true
+      requests_per_minute: 60
+      
+  # 数据库集成
+  database:
+    enabled: false
+    type: "sqlite"
+    connection:
+      sqlite:
+        path: "./data/quickserver.db"
+      mysql:
+        host: "localhost"
+        port: 3306
+        username: "root"
+        password: ""
+        database: "quickserver"
+
+# 部署配置
+deployment:
+  # 环境变量
+  environment: "development"  # development, staging, production
+  
+  # 容器化配置
+  docker:
+    image: "quickserver:latest"
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./data:/app/data"
+      - "./logs:/app/logs"
+    environment:
+      - "DEBUG=false"
+      - "LOG_LEVEL=INFO"
+      
+  # 反向代理配置
+  reverse_proxy:
+    enabled: false
+    type: "nginx"  # nginx, apache, caddy
+    config_template: |
+      server {
+          listen 80;
+          server_name example.com;
+          
+          location / {
+              proxy_pass http://localhost:8000;
+              proxy_set_header Host $host;
+              proxy_set_header X-Real-IP $remote_addr;
+          }
+      }
+
+# 监控和统计
+monitoring:
+  # 性能监控
+  performance:
+    enabled: false
+    metrics:
+      - "response_time"
+      - "request_count"
+      - "error_rate"
+      - "memory_usage"
+      - "cpu_usage"
+      
+  # 健康检查
+  health_check:
+    enabled: true
+    endpoint: "/health"
+    interval: 30  # seconds
+    
+  # 统计信息
+  statistics:
+    enabled: true
+    track_visitors: true
+    track_downloads: true
+    track_uploads: true
+    retention_days: 30
+
+# 国际化配置
+i18n:
+  default_locale: "zh-CN"
+  supported_locales:
+    - "zh-CN"
+    - "en-US"
+    - "ja-JP"
+    - "ko-KR"
+  
+  # 时区设置
+  timezone: "Asia/Shanghai"
+  date_format: "%Y-%m-%d"
+  time_format: "%H:%M:%S"
+
+# 元数据
+metadata:
+  created: "2024-03-01T00:00:00Z"
+  last_modified: "2024-03-15T16:30:00Z"
+  config_version: "1.0"
+  author: "xyanmi"
+  license: "MIT"
+  
+  # 配置文件描述
+  description: >
+    这是 QuickServer 的主配置文件，
+    包含了所有功能模块的详细配置选项。
+    支持多种数据类型和复杂的嵌套结构。
+    
+  # 标签和分类
+  tags:
+    - "server"
+    - "configuration"
+    - "yaml"
+    - "quickserver"
+    
+  # 联系信息
+  contact:
+    email: "contact@example.com"
+    github: "https://github.com/xyanmi"
+    documentation: "https://docs.quickserver.example.com" 
