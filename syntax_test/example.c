@@ -1,9 +1,9 @@
 /**
- * QuickServer C语言示例文件
+ * LitheServer C语言示例文件
  * 用于测试 C 语言语法高亮功能
  * 
  * @author xyanmi
- * @date 2024-03-15
+ * @date 2025-06-01
  */
 
 #include <stdio.h>
@@ -255,7 +255,7 @@ void build_http_response(http_response_t* response, int status_code,
              "%s\r\n"
              "Content-Length: %zu\r\n"
              "Connection: close\r\n"
-             "Server: QuickServer/1.0\r\n"
+             "Server: LitheServer/1.0\r\n"
              "\r\n",
              status_code, status_message,
              content_type ? content_type : "",
@@ -326,7 +326,7 @@ int main(int argc, char* argv[]) {
         return EXIT_FAILURE;
     }
     
-    printf("🚀 QuickServer started successfully!\n");
+    printf("🚀 LitheServer started successfully!\n");
     printf("📁 Serving files from current directory\n");
     printf("🌐 Server listening on http://localhost:%d\n", port);
     printf("💡 Press Ctrl+C to stop the server\n\n");
@@ -365,7 +365,7 @@ void cleanup_and_exit(int signal) {
         server_socket = -1;
     }
     
-    printf("\n👋 QuickServer stopped gracefully.\n");
+    printf("\n👋 LitheServer stopped gracefully.\n");
     
     if (signal != 0) {
         exit(EXIT_SUCCESS);

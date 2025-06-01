@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# QuickServer 部署和管理脚本
+# LitheServer 部署和管理脚本
 # Shell 语法高亮测试文件
 # 
 # 作者: xyanmi
@@ -22,11 +22,11 @@ readonly NC='\033[0m' # No Color
 # 常量定义
 readonly SCRIPT_NAME="$(basename "$0")"
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly PROJECT_NAME="QuickServer"
+readonly PROJECT_NAME="LitheServer"
 readonly DEFAULT_PORT=8080
 readonly CONFIG_FILE="config.yaml"
-readonly LOG_FILE="quickserver.log"
-readonly PID_FILE="quickserver.pid"
+readonly LOG_FILE="LitheServer.log"
+readonly PID_FILE="LitheServer.pid"
 
 # 全局变量
 VERBOSE=false
@@ -169,7 +169,7 @@ start_server() {
     mkdir -p logs
     
     # 构建启动命令
-    local cmd="python3 -m quickserver --port $port --host 0.0.0.0"
+    local cmd="python3 -m LitheServer --port $port --host 0.0.0.0"
     
     if [[ "$env" == "production" ]]; then
         cmd="$cmd --no-debug"
@@ -340,8 +340,8 @@ run_tests() {
     
     local test_commands=(
         "python3 -m pytest tests/ -v"
-        "python3 -m flake8 quickserver/"
-        "python3 -m mypy quickserver/"
+        "python3 -m flake8 LitheServer/"
+        "python3 -m mypy LitheServer/"
     )
     
     for cmd in "${test_commands[@]}"; do

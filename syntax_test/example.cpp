@@ -3,7 +3,7 @@
  * 演示现代 C++ (C++11/14/17/20) 特性
  * 
  * @author xyanmi
- * @date 2024-03-15
+ * @date 2025-06-01
  */
 
 #include <iostream>
@@ -22,7 +22,7 @@
 #include <concepts>
 
 // 命名空间
-namespace QuickServer {
+namespace LitheServer {
 
 // 模板类
 template<typename T>
@@ -390,11 +390,11 @@ public:
     const std::string& filename() const { return filename_; }
 };
 
-} // namespace QuickServer
+} // namespace LitheServer
 
 // 主函数
 int main() {
-    using namespace QuickServer;
+    using namespace LitheServer;
     
     try {
         // 创建智能数组

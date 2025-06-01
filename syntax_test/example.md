@@ -1,4 +1,4 @@
-# QuickServer 语法高亮测试
+# LitheServer 语法高亮测试
 
 > 这是一个用于测试 **Markdown 语法高亮** 功能的文档文件  
 > 包含了各种 Markdown 语法特性和代码块示例
@@ -40,7 +40,7 @@
 > > 这是嵌套引用
 > > 
 > > **作者**: xyanmi  
-> > **项目**: QuickServer
+> > **项目**: LitheServer
 
 ### 分隔线
 
@@ -55,7 +55,7 @@ ___
 ```python
 #!/usr/bin/env python3
 """
-QuickServer 示例代码
+LitheServer 示例代码
 演示 Python 语法高亮
 """
 
@@ -63,7 +63,7 @@ import os
 import asyncio
 from typing import List, Dict, Optional
 
-class QuickServer:
+class LitheServer:
     def __init__(self, host: str = "0.0.0.0", port: int = 8000):
         self.host = host
         self.port = port
@@ -89,7 +89,7 @@ class QuickServer:
         return decorator
 
 # 使用示例
-server = QuickServer()
+server = LitheServer()
 
 @server.route("/api/status")
 async def status_handler():
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
 ```javascript
 /**
- * QuickServer 前端代码示例
+ * LitheServer 前端代码示例
  * 演示现代 JavaScript 语法高亮
  */
 
@@ -192,7 +192,7 @@ document.getElementById('fileInput').addEventListener('change', async (e) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickServer - 语法高亮测试</title>
+    <title>LitheServer - 语法高亮测试</title>
     <style>
         :root {
             --primary-color: #3498db;
@@ -229,7 +229,7 @@ document.getElementById('fileInput').addEventListener('change', async (e) => {
 ### SQL 代码
 
 ```sql
--- QuickServer 数据库示例
+-- LitheServer 数据库示例
 -- 演示 SQL 语法高亮
 
 -- 创建用户表
@@ -304,7 +304,7 @@ $$ LANGUAGE plpgsql;
 
 ### 无序列表
 
-- 🚀 QuickServer 主要功能
+- 🚀 LitheServer 主要功能
   - 文件浏览和导航
   - 文件上传下载
   - 代码语法高亮
@@ -359,24 +359,24 @@ $$ LANGUAGE plpgsql;
 
 ### 链接示例
 
-- [QuickServer GitHub 仓库](https://github.com/xyanmi/quickserver)
+- [LitheServer GitHub 仓库](https://github.com/xyanmi/LitheServer)
 - [Python 官方文档](https://docs.python.org/3/)
 - [Markdown 语法指南](https://www.markdownguide.org/)
 - [开发者博客](https://blog.example.com) "可选的标题"
 
 ### 图片示例
 
-![QuickServer Logo](https://via.placeholder.com/400x200/3498db/ffffff?text=QuickServer "QuickServer 标志")
+![LitheServer Logo](https://via.placeholder.com/400x200/3498db/ffffff?text=LitheServer "LitheServer 标志")
 
-*图: QuickServer 项目标志*
+*图: LitheServer 项目标志*
 
 ### 参考链接
 
-[quickserver]: https://github.com/xyanmi/quickserver "QuickServer 项目"
+[LitheServer]: https://github.com/xyanmi/LitheServer "LitheServer 项目"
 [python]: https://python.org "Python 编程语言"
 [markdown]: https://daringfireball.net/projects/markdown/ "Markdown 语法"
 
-访问 [QuickServer][quickserver] 项目，了解更多关于 [Python][python] 和 [Markdown][markdown] 的信息。
+访问 [LitheServer][LitheServer] 项目，了解更多关于 [Python][python] 和 [Markdown][markdown] 的信息。
 
 ## 高级功能
 
@@ -410,14 +410,14 @@ $$
 ### 代码高亮 (指定语言)
 
 ```bash
-# 启动 QuickServer
-python -m quickserver --port 8080 --host 0.0.0.0
+# 启动 LitheServer
+python -m LitheServer --port 8080 --host 0.0.0.0
 
 # 安装依赖
-pip install quickserver
+pip install LitheServer
 
 # 查看帮助
-quickserver --help
+LitheServer --help
 ```
 
 ### 警告框 (扩展语法)
@@ -444,7 +444,7 @@ quickserver --help
 - ✅ 图片和引用
 - ✅ 高级功能
 
-**感谢使用 QuickServer！** 🎉
+**感谢使用 LitheServer！** 🎉
 
 ---
 

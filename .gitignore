@@ -4,9 +4,11 @@ __pycache__/
 *$py.class
 devinfo.md
 test_*
+syntax_test/
+syntax_test
 # C extensions
 *.so
-syntax_test/
+
 
 # Distribution / packaging
 .Python

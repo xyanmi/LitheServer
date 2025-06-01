@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "QuickServer",
+    "name": "LitheServer",
     "version": "0.1.0",
     "description": "一个轻量级的本地文件服务器，具有美观的 Web 界面",
     "author": {
@@ -14,7 +14,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/xyanmi/quickserver.git",
+      "url": "https://github.com/xyanmi/LitheServer.git",
       "branch": "main",
       "lastCommit": "a1b2c3d4e5f6g7h8i9j0",
       "tags": ["v0.1.0", "stable", "release"]
@@ -178,14 +178,14 @@
         "features": ["debug", "hot-reload", "verbose-logging"]
       },
       "staging": {
-        "url": "https://staging.quickserver.example.com",
+        "url": "https://staging.LitheServer.example.com",
         "status": "inactive",
         "lastDeployed": "2024-03-10T15:30:00.000Z",
         "version": "0.1.0-rc1",
         "features": ["staging-data", "performance-monitoring"]
       },
       "production": {
-        "url": "https://quickserver.example.com",
+        "url": "https://LitheServer.example.com",
         "status": "planned",
         "lastDeployed": null,
         "version": null,
@@ -200,12 +200,12 @@
       "buildAgent": "GitHub Actions",
       "artifacts": [
         {
-          "name": "quickserver-0.1.0.tar.gz",
+          "name": "LitheServer-0.1.0.tar.gz",
           "size": "125KB",
           "checksum": "sha256:abc123def456ghi789jkl012mno345pqr678stu901vwx234yz567"
         },
         {
-          "name": "quickserver-0.1.0-py3-none-any.whl",
+          "name": "LitheServer-0.1.0-py3-none-any.whl",
           "size": "98KB",
           "checksum": "sha256:def456ghi789jkl012mno345pqr678stu901vwx234yz567abc123"
         }
@@ -294,13 +294,13 @@
     "lastModified": "2024-03-15T16:20:30.123Z",
     "fileVersion": "1.0",
     "encoding": "UTF-8",
-    "generator": "QuickServer Config Generator v1.0",
+    "generator": "LitheServer Config Generator v1.0",
     "checksum": "sha256:1234567890abcdef1234567890abcdef12345678",
     "size": 5847,
     "locale": "zh-CN",
     "timezone": "Asia/Shanghai",
     "comments": [
-      "这是 QuickServer 项目的配置文件",
+      "这是 LitheServer 项目的配置文件",
       "包含了项目的所有元数据和配置信息",
       "支持中文和英文的混合内容",
       "用于测试 JSON 语法高亮功能"

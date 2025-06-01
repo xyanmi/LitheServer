@@ -3,7 +3,7 @@
 
 # 服务器基础配置
 server:
-  name: "QuickServer"
+  name: "LitheServer"
   version: "0.1.0"
   description: "轻量级本地文件服务器"
   
@@ -114,7 +114,7 @@ logging:
   # 日志文件
   file:
     enabled: true
-    path: "./logs/quickserver.log"
+    path: "./logs/LitheServer.log"
     max_size: "10MB"
     backup_count: 5
     
@@ -188,13 +188,13 @@ extensions:
     type: "sqlite"
     connection:
       sqlite:
-        path: "./data/quickserver.db"
+        path: "./data/LitheServer.db"
       mysql:
         host: "localhost"
         port: 3306
         username: "root"
         password: ""
-        database: "quickserver"
+        database: "LitheServer"
 
 # 部署配置
 deployment:
@@ -203,7 +203,7 @@ deployment:
   
   # 容器化配置
   docker:
-    image: "quickserver:latest"
+    image: "LitheServer:latest"
     ports:
       - "8000:8000"
     volumes:
@@ -279,7 +279,7 @@ metadata:
   
   # 配置文件描述
   description: >
-    这是 QuickServer 的主配置文件，
+    这是 LitheServer 的主配置文件，
     包含了所有功能模块的详细配置选项。
     支持多种数据类型和复杂的嵌套结构。
     
@@ -288,10 +288,10 @@ metadata:
     - "server"
     - "configuration"
     - "yaml"
-    - "quickserver"
+    - "LitheServer"
     
   # 联系信息
   contact:
     email: "contact@example.com"
     github: "https://github.com/xyanmi"
-    documentation: "https://docs.quickserver.example.com" 
+    documentation: "https://docs.LitheServer.example.com" 
