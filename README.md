@@ -1,4 +1,4 @@
-# 🚀 QuickServer
+# 🚀 LitheServer
 
 [English](#english) | [中文](#中文)
 
@@ -6,7 +6,7 @@
 
 ## 中文
 
-QuickServer 是一个基于 Python 开发的轻量级本地文件服务器，提供了比标准 http.server 更友好、功能更丰富的 Web 界面。
+LitheServer 是一个基于 Python 开发的轻量级本地文件服务器，提供了比标准 http.server 更友好、功能更丰富的 Web 界面。
 
 ### 🖼️ 界面预览
 
@@ -64,24 +64,35 @@ QuickServer 是一个基于 Python 开发的轻量级本地文件服务器，提
 #### 快速开始
 
 ```bash
-# 克隆项目
-git clone https://github.com/xyanmi/quickserver.git
-
-cd quickserver
-# or
-python setup.py
+# 通过pip安装
+pip install litheserver
 
 # 启动服务器
-python -m quickserver
+litheserver
 
 # 或指定端口和目录
-python -m quickserver -p 8080 -d /path/to/directory
+litheserver -p 8080 -d /path/to/directory
+```
+
+#### 从源码安装
+
+```bash
+# 克隆项目
+git clone https://github.com/xyanmi/litheserver.git
+
+cd litheserver
+
+# 安装
+python setup.py install
+
+# 启动服务器
+python -m litheserver
 ```
 
 #### 命令行选项
 
 ```bash
-python -m quickserver [选项]
+litheserver [选项]
 
 选项:
   -p, --port PORT        指定服务器端口 (默认: 8000)
@@ -127,11 +138,11 @@ python -m quickserver [选项]
 
 ⭐ If you find this project useful, please give it a star!
 
-💡 QuickServer - Making local file serving simple and beautiful!
+💡 LitheServer - Making local file serving simple and beautiful!
 
 ## English
 
-QuickServer is a lightweight local file server developed in Python, providing a more user-friendly and feature-rich web interface than the standard http.server.
+LitheServer is a lightweight local file server developed in Python, providing a more user-friendly and feature-rich web interface than the standard http.server.
 
 ### 🖼️ Interface Preview
 
@@ -189,44 +200,55 @@ Convenient file upload experience:
 #### Quick Start
 
 ```bash
-# Clone the project
-git clone https://github.com/xyanmi/quickserver.git
-
-cd quickserver 
-# or
-python setup.py
+# Install via pip
+pip install litheserver
 
 # Start the server
-python -m quickserver
+litheserver
 
 # Or specify port and directory
-python -m quickserver -p 8080 -d /path/to/directory
+litheserver -p 8080 -d /path/to/directory
+```
+
+#### Install from Source
+
+```bash
+# Clone the project
+git clone https://github.com/xyanmi/litheserver.git
+
+cd litheserver
+
+# Install
+python setup.py install
+
+# Start the server
+python -m litheserver
 ```
 
 #### Command Line Options
 
 ```bash
-python -m quickserver [options]
+litheserver [options]
 
 Options:
   -p, --port PORT        Specify server port (default: 8000)
-  -d, --directory DIR    Specify serving directory (default: current directory)
+  -d, --directory DIR    Specify service directory (default: current directory)
   --host HOST           Specify bind address (default: 0.0.0.0)
-  -h, --help            Show help message
+  -h, --help            Show help information
 ```
 
-### 🌟 Feature Demo
+### 🌟 Feature Demonstration
 
 Visit `http://localhost:8000` to use all features:
 
-- **File Browsing**: Click folders to enter subdirectories with breadcrumb navigation
-- **Real-time Search**: Enter keywords in search box to quickly locate files
+- **File Browsing**: Click folders to enter subdirectories, supports breadcrumb navigation
+- **Real-time Search**: Enter keywords in the search box to quickly locate files
 - **File Preview**: Click 👁️ icon to preview supported file types
 - **File Download**: Click ⬇️ icon to download files, supports folder ZIP download
-- **File Upload**: Click "📤 Upload Files" to expand upload area with drag & drop support
+- **File Upload**: Click "📤 Upload Files" to expand upload area, supports drag & drop upload
 - **File Management**: Rename 🏷️, delete 🗑️, move files to other directories
-- **Create Folder**: Click "📁 New Folder" to create new directories
-- **Batch Download**: Click 📦 to package and download folders as ZIP files
+- **New Folder**: Click "📁 New Folder" to create new directory
+- **Pack Download**: Click 📦 to pack corresponding folder into zip and download
 
 ### 🎨 Supported File Types
 
@@ -234,13 +256,13 @@ Visit `http://localhost:8000` to use all features:
 - **Programming Languages**: Python, JavaScript, TypeScript, Java, C/C++, Go, Rust, PHP
 - **Web Technologies**: HTML, CSS, XML, JSON, SVG
 - **Configuration Files**: YAML, TOML, INI, ENV
-- **Scripting Languages**: Shell, PowerShell, Batch
+- **Script Languages**: Shell, PowerShell, Batch
 - **Document Formats**: Markdown, LaTeX, RTF
 - **Data Formats**: CSV, SQL, Log files
 
 #### Image Preview
 - **Common Formats**: JPG, PNG, GIF, SVG, WebP
-- **Instant Preview**: View directly in browser without downloading
+- **Instant Preview**: No download required, view directly in browser
 
 ### 📋 System Requirements
 
@@ -252,4 +274,4 @@ Visit `http://localhost:8000` to use all features:
 
 ⭐ If you find this project useful, please give it a star!
 
-💡 QuickServer - Making local file serving simple and beautiful! 
+💡 LitheServer - Making local file serving simple and beautiful! 

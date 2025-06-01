@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-QuickServer - Main entry point for command line usage
+LitheServer - Main entry point for command line usage
 """
 
 import sys
 import argparse
 import os
-from .server import QuickServer
+from .server import LitheServer
 
 
 def main():
-    """Main entry point for the QuickServer application."""
+    """Main entry point for the LitheServer application."""
     parser = argparse.ArgumentParser(
-        description='QuickServer - A lightweight local file server with beautiful web interface',
-        prog='quickserver'
+        description='LitheServer - A lightweight local file server with beautiful web interface',
+        prog='litheserver'
     )
     
     parser.add_argument(
@@ -40,7 +40,7 @@ def main():
     parser.add_argument(
         '--version',
         action='version',
-        version=f'QuickServer {__import__("quickserver").__version__}'
+        version=f'LitheServer {__import__("litheserver").__version__}'
     )
     
     args = parser.parse_args()
@@ -55,7 +55,7 @@ def main():
         sys.exit(1)
     
     # Create and start server
-    server = QuickServer(
+    server = LitheServer(
         host=args.host,
         port=args.port,
         directory=args.directory
@@ -64,7 +64,7 @@ def main():
     try:
         server.start()
     except KeyboardInterrupt:
-        print("\nShutting down QuickServer...")
+        print("\nShutting down LitheServer...")
         server.stop()
     except Exception as e:
         print(f"Error starting server: {e}")

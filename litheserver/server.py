@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-QuickServer - Core server implementation
+LitheServer - Core server implementation
 
 A lightweight local file server with a beautiful web interface.
 
@@ -26,8 +26,8 @@ import zipfile
 import base64
 
 
-class QuickServerHandler(BaseHTTPRequestHandler):
-    """HTTP request handler for QuickServer."""
+class LitheServerHandler(BaseHTTPRequestHandler):
+    """HTTP request handler for LitheServer."""
     
     def __init__(self, *args, directory=None, **kwargs):
         self.directory = directory or os.getcwd()
@@ -1181,7 +1181,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickServer - {html.escape(current_path)}</title>
+    <title>LitheServer - {html.escape(current_path)}</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="shortcut icon" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
@@ -1246,7 +1246,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
 <body>
     <div class="container">
         <header>
-            <h1>🚀 QuickServer</h1>
+            <h1>🚀 LitheServer</h1>
             <nav class="breadcrumb">
                 {breadcrumb_html}
             </nav>
@@ -1278,7 +1278,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
         </main>
         
         <footer style="text-align: center; margin-top: 20px; color: rgba(0, 0, 0, 0.6); font-size: 0.9em;">
-            <p>QuickServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
+            <p>LitheServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
         </footer>
     </div>
     
@@ -1855,7 +1855,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
     </script>
     
     <footer style="text-align: center; margin-top: 20px; color: rgba(255, 255, 255, 0.8); font-size: 0.9em;">
-        <p>QuickServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">@xyanmi</a></p>
+        <p>LitheServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: rgba(255, 255, 255, 0.9); text-decoration: none;">@xyanmi</a></p>
     </footer>
 </body>
 </html>
@@ -1869,7 +1869,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Error - QuickServer</title>
+    <title>Upload Error - LitheServer</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="shortcut icon" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
@@ -1895,7 +1895,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
     </div>
     
     <footer style="text-align: center; margin-top: 20px; color: rgba(0, 0, 0, 0.6); font-size: 0.9em;">
-        <p>QuickServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
+        <p>LitheServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
     </footer>
 </body>
 </html>
@@ -1912,7 +1912,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Successful - QuickServer</title>
+    <title>Upload Successful - LitheServer</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
     <link rel="shortcut icon" href="/favicon.ico?v={datetime.datetime.now().timestamp()}">
@@ -1940,7 +1940,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
     </div>
     
     <footer style="text-align: center; margin-top: 20px; color: rgba(0, 0, 0, 0.6); font-size: 0.9em;">
-        <p>QuickServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
+        <p>LitheServer v0.1.0 - 💻 Created by <a href="https://github.com/xyanmi" target="_blank" style="color: #3498db; text-decoration: none;">@xyanmi</a></p>
     </footer>
 </body>
 </html>
@@ -2045,7 +2045,7 @@ class QuickServerHandler(BaseHTTPRequestHandler):
     def get_css_content(self):
         """Return CSS content for styling."""
         return '''
-/* QuickServer CSS Styles */
+/* LitheServer CSS Styles */
 * {
     margin: 0;
     padding: 0;
@@ -2984,8 +2984,8 @@ footer {
         print(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {format % args}")
 
 
-class QuickServer:
-    """Main QuickServer class."""
+class LitheServer:
+    """Main LitheServer class."""
     
     def __init__(self, host='0.0.0.0', port=8000, directory='.'):
         self.host = host
@@ -2998,12 +2998,12 @@ class QuickServer:
         """Start the server."""
         # Create handler with bound directory
         def handler_factory(*args, **kwargs):
-            return QuickServerHandler(*args, directory=self.directory, **kwargs)
+            return LitheServerHandler(*args, directory=self.directory, **kwargs)
         
         try:
             self.httpd = HTTPServer((self.host, self.port), handler_factory)
             
-            print(f"\n🚀 QuickServer starting...")
+            print(f"\n🚀 LitheServer starting...")
             print(f"📁 Serving directory: {self.directory}")
             print(f"💻 Created by @xyanmi (https://github.com/xyanmi)")
             print(f"🌐 Server running at:")

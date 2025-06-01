@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "litheserver"
+version = "0.1.1"
+description = "A lightweight local file server with a beautiful web interface"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "xyanmi", email = "youryanmi@gmail.com"}
+]
+keywords = ["file server", "http server", "web interface", "file sharing", "local server", "lightweight"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: System :: Filesystems",
+]
+
+[project.urls]
+Homepage = "https://github.com/xyanmi/litheserver"
+"Bug Reports" = "https://github.com/xyanmi/litheserver/issues"
+Source = "https://github.com/xyanmi/litheserver"
+
+[project.scripts]
+litheserver = "litheserver.__main__:main"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "test*", "*.tests", "*.tests.*", "syntax_test*", "test_files*"]
+
+[tool.setuptools.package-data]
+litheserver = ["*"] 
