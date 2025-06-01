@@ -6,7 +6,7 @@ devinfo.md
 test_*
 # C extensions
 *.so
-*_test
+syntax_test/
 
 # Distribution / packaging
 .Python
